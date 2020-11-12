@@ -369,6 +369,16 @@ body .shiftnav.shiftnav-skin-light {
 	.validation_error {
 		display: none;
 	}
+	.gform_confirmation_wrapper  {
+		background-color: white;
+		padding: 2em;
+		text-align: center;
+		border-radius: 5px;
+		
+		h3 {
+			color: $secondary;
+		}
+	}
 }
 
 /* Block - Callout */
