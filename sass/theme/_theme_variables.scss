@@ -1,0 +1,27 @@
+$blue:		#37B5DD;
+$green:		#75BB56;
+$light:		#F9F9F9;
+$dark:		#2C3131;
+$primary: 	$green;
+$secondary:	$blue;
+$dark:		#2C3131;
+$spacer: 1.8rem;
+
+$line-height-base: 1.65;
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+$font-size-base: 1.1rem;
+$font-size-xs: .8rem;
+$font-size-sm: .9rem;
+$paragraph-margin-bottom: 1.5em;
+
+$headings-font-weight: 800;
+$h1-font-size: 60px;
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1300px
+) !default;

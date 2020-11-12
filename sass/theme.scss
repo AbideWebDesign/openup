@@ -1,0 +1,13 @@
+@import "theme/theme_variables";  // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+@import "../src/sass/bootstrap45/bootstrap";      // <-------- Loads Bootstrap4
+@import "understrap/understrap";  // <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+
+// Optional files - If you dont use the corresponding scripts/fonts comment em out
+@import "../src/sass/fontawesome5/fontawesome";    // <-------- Font Awesome Icon font
+@import "../src/sass/fontawesome5/solid";
+@import "../src/sass/fontawesome5/brands";
+@import "assets/underscores";     // <-------- Underscores media styles
+
+// Any additional imported files //
+@import "theme/theme_plugins";
+@import "theme/theme";
