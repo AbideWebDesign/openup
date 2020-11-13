@@ -22,7 +22,7 @@ get_header();
 
 				<main class="site-main" id="main">
 
-					<section class="error-404 not-found">
+					<section class="error-404 not-found text-center">
 
 						<header class="page-header">
 
@@ -32,10 +32,7 @@ get_header();
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'diagrid' ); ?></p>
-
-							<?php get_search_form(); ?>
-
+							<p><?php _e( 'It looks like nothing was found at this location.'); ?></p>
 
 						</div><!-- .page-content -->
 

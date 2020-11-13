@@ -226,12 +226,12 @@ li {
 }
 @include media-breakpoint-down('xl') {
 	.logo {
-		max-width: 175px;
+		max-width: 155px;
 	}
 }
 @include media-breakpoint-down('lg') {
 	.logo {
-		max-width: 150px;
+		max-width: 130px;
 	}
 }
 @include media-breakpoint-down('xs') {

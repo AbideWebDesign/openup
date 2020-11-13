@@ -144,7 +144,7 @@ defined( 'ABSPATH' ) || exit;
 				
 				<div class="text-xs text-center text-md-right">
 					
-					<a href="#"><?php _e('Terms of Use'); ?></a> | <a href="#"><?php _e('Privacy Policy'); ?></a> <span class="d-none d-md-inline">|</span> <span class="d-block d-md-inline"><a href="https://abidewebdesign.com" target="_blank"><?php _e('Website Design and Maintenance by Abide Web Design'); ?></a></span>
+					<a href="<?php echo home_url('/terms-of-use'); ?>"><?php _e('Terms of Use'); ?></a> | <a href="<?php echo home_url('/privacy-policy'); ?>"><?php _e('Privacy Policy'); ?></a> <span class="d-none d-md-inline">|</span> <span class="d-block d-md-inline"><a href="https://abidewebdesign.com" target="_blank"><?php _e('Website Design and Maintenance by Abide Web Design'); ?></a></span>
 				
 				</div>
 				
