@@ -196,6 +196,9 @@ li {
 	margin-bottom: 3em;
 	max-width: 35px;
 }
+select {
+	-webkit-appearance: none;
+}
 /* Block - Top Bar */
 
 #top-bar {
@@ -529,7 +532,8 @@ body .shiftnav.shiftnav-skin-light {
 		input[type="time"],
 		input[type="week"],
 		input[type="url"],
-		select {
+		select,
+		textarea {
 			border-color: darken($secondary, 5) !important;
 		}
 		.gfield_required {
