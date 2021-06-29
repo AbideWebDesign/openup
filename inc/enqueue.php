@@ -19,6 +19,8 @@ if ( ! function_exists( 'openup_scripts' ) ) {
 		wp_enqueue_script( 'jquery' );
 
 		wp_enqueue_script( 'openup-scripts', get_template_directory_uri() . '/js/theme.js', array(), null, true );
+		
+		wp_enqueue_script( 'openup-core', get_template_directory_uri() . '/js/core.js', array(), null, true );
 	}
 } // endif function_exists( 'openup_scripts' ).
 

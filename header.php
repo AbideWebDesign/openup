@@ -38,27 +38,27 @@ defined( 'ABSPATH' ) || exit;
 	
 	<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'openup' ); ?></a>
 
-	<div id="wrapper-navbar" class="wrapper-xs bg-light">
+	<div id="wrapper-navbar" class="wrapper-xs">
 
 		<div class="container">
 			
-			<div class="row justify-content-between">
+			<div class="row justify-content-center justify-content-lg-between">
 				
-				<div class="col-12 col-md-auto text-center text-md-left">
+				<div class="col-12 col-md-auto text-center text-md-left mb-md-3 mb-lg-0">
 					
-					<a href="<?php echo home_url(); ?>"><img class="logo img-fluid" alt="<?php _e('Open Up, Inc.'); ?>" src="<?php the_field('logo', 'options'); ?>" /></a>
-					
-				</div>
-				
-				<div class="col-md-auto align-self-center d-none d-lg-block">
-					
-					<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'primary-menu' ) ); ?>
-					
+					<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image( get_field('logo', 'options'), 'Full', false, array('class'=>'logo img-fluid', 'alt'=>'Open Up, Inc.') ); ?></a>
+										
 				</div>
 				
 				<div class="col-md-auto align-self-center d-none d-md-block">
 					
-					<a href="<?php echo home_url('/donate'); ?>" class="btn btn-primary"><?php _e('Donate'); ?></a>
+					<div class="d-flex">
+						
+						<?php wp_nav_menu( array( 'theme_location'  => 'primary', 'menu_class' => 'primary-menu pl-0', 'container_class' => 'align-self-center mr-4' ) ); ?>
+					
+						<div class=""><a href="<?php echo home_url('/donate'); ?>" class="btn btn-secondary btn-alt"><?php _e('Donate'); ?></a></div>
+						
+					</div>
 					
 				</div>
 				

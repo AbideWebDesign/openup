@@ -18,12 +18,15 @@ button, .btn {
 	}
 }
 .btn {
-	border-radius: 0;
 	padding: .65em 3.75em;
 	font-weight: bold;
 	color: white;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
+	
+	@include media-breakpoint-down(sm) {
+		padding: .65em 1.5em;
+	}
 }
 .btn-light, .btn-light:hover{
 	color: $primary;
@@ -67,6 +70,23 @@ button, .btn {
 		color: white !important;
 	}
 }
+.btn-alt {
+	background-color: transparent;
+	border-width: 2px;
+	box-shadow: none;
+	
+	&.btn-secondary {
+		color: $secondary;
+		
+		&:hover {
+			color: darken($secondary, 20); 
+			border-color: darken($secondary, 20);  
+		}
+	}
+	&:hover {
+		background-color: transparent;
+	}
+}
 .text-sm {
 	i {
 		font-size: $font-size-sm;
@@ -78,8 +98,14 @@ button, .btn {
 .text-xs, .text-xs p {
 	font-size: $font-size-xs;
 }
+.text-base {
+	font-size: $font-size-base;
+}
 .text-lg {
 	font-size: $font-size-lg;
+}
+.text-xl {
+	font-size: $h2-font-size;
 }
 .text-white {
 	color: white;
@@ -101,11 +127,12 @@ h1 {
 	font-size: 50px;
 }
 h2 {
-	line-height: 54px;
+	line-height: 45px;
 }
 h3 {
 	font-size: 23px;
 	line-height: 34px;
+	color: $primary;
 }
 h4 {
 	font-size: 18px;
@@ -126,10 +153,15 @@ ol > li::marker, ul > li::marker {
 }
 li {
 	padding-left: .5em;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.2em;
 	
 	strong {
 		font-size: $font-size-lg;
+	}
+}
+.nospace {
+	p {
+		margin: 0;
 	}
 }
 .form-control {
@@ -153,8 +185,14 @@ li {
 .bg-primary, .bg-secondary, .bg-dark, .bg-black {
 	color: white;
 	
-	h2, p, li, a {
+	h2, h3, p, li:not(.gfield), a {
 		color: white;
+	}
+	a:not(.btn) {
+		text-decoration: underline;
+	}
+	.card .gfield {
+		color: $body-color;
 	}
 }
 .bg-black {
@@ -199,6 +237,63 @@ li {
 select {
 	-webkit-appearance: none;
 }
+.card {
+	border-color: $gray-100;
+}
+.house-sm {
+	width: 28px;
+}
+.house {
+	width: 38px;
+}
+.list {
+	li {
+		margin-bottom: .5em;
+	}
+	li:last-child {
+		margin-bottom: 0;
+	}
+}
+.offset-img {
+	z-index: 1;
+}
+.offset-img-left {
+	margin-left: -80px;
+	
+	@include media-breakpoint-down(lg) {
+		margin-left: 0;
+	}
+}
+.offset-text {
+	@include media-breakpoint-up(xl) {
+		margin-left: -300px;
+		padding: 4.4em 6em 4.4em 380px;
+	}
+	@include media-breakpoint-down(xl) {
+		margin-left: -50px;
+		padding: 3em 3em 3em 100px;
+	}
+	@include media-breakpoint-down(lg) {
+		margin-top: -2em;
+		margin-left: 0;
+		padding: 5em 3em 3em 3em;
+	}
+	@include media-breakpoint-down(md) {
+		margin: 0;
+		padding: 2em;	
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+	
+}
+.bg-pattern {
+	background: url('/wp-content/uploads/2021/06/openup-bg.svg') bottom left no-repeat;
+}
+#section-5  {
+	margin-top: -8em;
+	padding-top: 10em;
+}
 /* Block - Top Bar */
 
 #top-bar {
@@ -215,12 +310,11 @@ select {
 	
 	li {
 		display: inline-block;
-		margin-right: 1.4em;
+		margin-right: 1em;
 		margin-bottom: 0;
 		
 		a {
 			color: $body-color;
-			font-weight: bold;
 		}
 	}
 	li:last-child {
@@ -316,18 +410,20 @@ body .shiftnav.shiftnav-skin-light {
 		width: 100%;
 	}	
 }
+.wrapper-hero {
+	height: 450px;
+}
 #wrapper-hero-image, #wrapper-hero-form {
-	background-position: top center;
+	background-position: bottom center;
 	background-color: #000;
 	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	height: 450px;
 	position: relative;
 	
 	.bg-overlay {
 		position: absolute;
-	    background: linear-gradient(rgba(0,0,0, 0),rgba(0,0,0,.5));
+	    background: linear-gradient(rgba(0,0,0, .5),rgba(0,0,0,.5));
 	    bottom: 0;
 	    left: 0;
 	    right: 0;
@@ -336,6 +432,10 @@ body .shiftnav.shiftnav-skin-light {
 	}
 	h1 {
 		color: white;
+	}
+	a:not(.btn) {
+		color: $secondary;
+		text-decoration: underline;
 	}
 }
 #wrapper-hero-form {
@@ -381,6 +481,15 @@ body .shiftnav.shiftnav-skin-light {
 		h3 {
 			color: $secondary;
 		}
+	}
+}
+
+.hero-home {
+	max-height: 750px;
+	overflow: hidden;
+	
+	@include media-breakpoint-down(sm) {
+		max-height: inherit;
 	}
 }
 
@@ -624,4 +733,39 @@ body .shiftnav.shiftnav-skin-light {
 			margin-bottom: 0;
 		}
 	}
+	a {
+		text-decoration: none;
+	}
+}
+#wrapper-bottom {
+	a {
+		text-decoration: none;
+	}
+}
+
+/* Calculator */
+#input_5_1 {
+	background-color: #38B6DD1A;
+	border-color: #38B6DD;
+}
+#field_5_2, #field_5_3 {
+	label {
+		font-weight: normal;
+		font-size: 16px;
+		color: $body-color;
+	}
+}
+#gform_5 {
+	.ginput_product_price_label, .gform_footer {
+		display: none;
+	}
+}
+.calculation_1, .calculation_2 {
+	.ginput_product_price {
+		font-size: 30px;
+		color: #00B6E2 !important;		
+	}
+}
+.calculation_2 .ginput_product_price {
+	color: #E20000 !important;
 }

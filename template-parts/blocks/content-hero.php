@@ -4,7 +4,7 @@
 
 <?php if ( $type == 'Image Only' ): ?>
 	
-	<div id="wrapper-hero-image" style="background-image: url( <?php echo $image[0]; ?> )">
+	<div id="wrapper-hero-image" class="wrapper-hero" style="background-image: url( <?php echo $image[0]; ?> )">
 		
 		<div class="bg-overlay"></div>
 		
@@ -58,30 +58,30 @@
 		
 <?php else: ?>
 
-	<div id="wrapper-hero" class="bg-light">
+	<div id="wrapper-hero-image" class="wrapper" style="background-image: url( <?php echo $image[0]; ?> )">		
 		
-		<div class="d-flex flex-column flex-lg-row">
-				
-			<div class="hero-content align-self-center text-center text-lg-left mb-4 px-2 px-md-0">
-								
-				<h1 class="mb-3"><?php the_field('hero_title'); ?></h1>
-				
-				<p class="lead mb-4"><?php the_field('hero_lead'); ?></p>
-				
-				<?php if ( get_field('hero_link') ): ?>
+		<div class="bg-overlay"></div>
+		
+		<div class="container h-100">
+	
+			<div class="row justify-content-center text-center text-white h-100">
 					
-					<?php echo get_button( get_field('hero_link'), 'btn btn-primary btn-lg btn-arrow' ); ?>
+				<div class="col-xl-8 align-self-center">
+															
+					<h1 class="mb-3"><?php the_field('hero_title'); ?></h1>
 					
-				<?php endif; ?>
-								
+					<p class="lead mb-4"><?php the_field('hero_lead'); ?></p>
+					
+					<?php if ( get_field('hero_link') ): ?>
+						
+						<?php echo get_button( get_field('hero_link'), 'btn btn-primary btn-lg btn-arrow' ); ?>
+						
+					<?php endif; ?>
+															
+				</div>
+					
 			</div>
 			
-			<div class="ml-auto align-self-end">
-				
-				<?php echo wp_get_attachment_image( get_field('hero_image'), 'Full', false, array('class'=>'img-fluid') ); ?>
-				
-			</div>
-				
 		</div>
 		
 	</div>

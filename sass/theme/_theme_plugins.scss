@@ -1,5 +1,8 @@
 /* Gravity Forms */
-body.page-template-default .gform_wrapper {
+body .gform_legacy_markup_wrapper {
+	margin: 0;
+}
+body .gform_wrapper {
 	input:-internal-autofill-selected {
 		background-color: white !important;
 	}
@@ -35,7 +38,9 @@ body.page-template-default .gform_wrapper {
 		@extend .sr-only;
 	}
 	.top_label .gfield_label {
-		font-size: $font-size-sm;
+		font-size: $font-size-xs;
+		color: $text-muted;
+		margin-bottom: 0;
 	}
 	ul {
 		@extend .list-unstyled;

@@ -74,7 +74,7 @@ defined( 'ABSPATH' ) || exit;
 					
 					<div class="mr-md-4 text-center text-md-left mb-3 mb-md-0">
 						
-						<a href="<?php echo home_url(); ?>"><img class="logo img-fluid" alt="<?php _e('Open Up, Inc.'); ?>" src="<?php the_field('logo', 'options'); ?>" /></a>
+						<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image( get_field('logo', 'options'), 'Full', false, array('class'=>'logo img-fluid', 'alt'=>'Open Up, Inc.') ); ?></a>
 						
 						<div class="mt-2">
 							
