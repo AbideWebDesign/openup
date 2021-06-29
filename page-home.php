@@ -308,7 +308,7 @@ $house_src = '/wp-content/uploads/2021/06/house.png';
 								
 								<?php $link = get_field('hero_box_button_1'); ?>
 																
-								<a href="<?php echo $link['url']; ?>" class="btn btn-secondary btn-block" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+								<a href="/find-a-home" class="btn btn-secondary btn-block" target="<?php echo $link['target']; ?>">Find a Home</a>
 								
 							</div>
 							
