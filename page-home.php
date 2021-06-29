@@ -306,9 +306,9 @@ $house_src = '/wp-content/uploads/2021/06/house.png';
 								
 								<div class="mb-4"><?php the_field('hero_box_text_1'); ?></div>
 								
-								<?php $link1 = get_field('hero_box_button_1'); ?>
+								<?php $link = get_field('hero_box_button_1'); ?>
 																
-								<a href="<?php echo $link1['url']; ?>" class="btn btn-secondary btn-block" target="<?php echo $link1['target']; ?>"><?php echo $link1['title']; ?></a>
+								<a href="<?php echo $link['url']; ?>" class="btn btn-secondary btn-block" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 								
 							</div>
 							
