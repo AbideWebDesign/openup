@@ -50,7 +50,9 @@ defined( 'ABSPATH' ) || exit;
 					
 					<a class="text-white mr-1" href="<?php the_field('instagram', 'options'); ?>" target="_blank"><i class="fab fa-instagram"></i></a>
 					
-					<a class="text-white" href="<?php the_field('facebook', 'options'); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					<a class="text-white mr-1" href="<?php the_field('facebook', 'options'); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					
+					<a class="text-white" href="<?php the_field('linkedin', 'options'); ?>" target="_blank"><i class="fab fa-linkedin-square"></i></a>
 					
 				</div>
 				
