@@ -8,11 +8,11 @@ jQuery( function ( $ ) {
 	
 		if ( $( '#ginput_base_price_5_3' ).val().indexOf( '-' ) != -1 ) {
 					
-			$( '#calculator_message' ).append('*You would have to pay an extra ' + $(this).val().replace('-', '') + '/mo to afford fair market rent. You should definitely check out home sharing!');
+			$( '#calculator_message' ).append('*You would have to pay an extra ' + $(this).val().replace('-', '') + '/mo to afford fair market rent. You should definitely check out homesharing!');
 			
 		} else {
 			
-			$( '#calculator_message' ).append('*You can afford fair market rent. You still may want to explore home sharing as an option to really get ahead in your finances.');			
+			$( '#calculator_message' ).append('*You can afford fair market rent. You still may want to explore homesharing as an option to really get ahead in your finances.');			
 			
 		}
 		
